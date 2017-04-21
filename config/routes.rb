@@ -3,14 +3,11 @@ Rails.application.routes.draw do
   
   get '/places/new' => 'places#new'
   get '/places/:id/edit' => 'places#edit'
+  get '/places/reset' => 'places#reset'
   get '/places' => 'places#index'
   get '/places/:id' => 'places#show'
   delete '/places/:id' => 'places#delete'
-
-  
   post '/places' => 'places#create'
-  
   patch '/places/:id' => 'places#update'
-
   root 'places#index'
 end

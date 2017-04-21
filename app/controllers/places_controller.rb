@@ -37,4 +37,9 @@ class PlacesController < ApplicationController
 		p.save
 		redirect_to "/places/#{params["id"]}"
 	end
+
+	def reset
+		Rails.application.load_seed
+		redirect_to "/places"
+	end
 end
