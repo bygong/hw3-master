@@ -1,0 +1,23 @@
+<%= form_tag "/places/#{params["id"]}", method: "patch" do %>
+
+  <p>
+    <% p = Place.find_by(:id => params["id"]) %>
+    <%= label_tag "Title" %>
+    <%= text_field_tag "Title", p.title%>
+  </p>
+
+  <p>
+    <%= label_tag "Photo Link" %>
+    <%= text_field_tag "Photo Link", p.photo %>
+  </p>
+
+  <p>
+    <%= label_tag "Description" %>
+    <%= text_field_tag "Description", p.description %>
+  </p>
+
+  <p>
+      <%= submit_tag %>
+  </p>
+
+<% end %>

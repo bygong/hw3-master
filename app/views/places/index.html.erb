@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+  .row { margin-bottom: 36px; }
+  img { box-shadow: 4px 4px 4px gray;}
+</style>
+
+<p><%= link_to "Add new place", "/places/new" %></p>
+
+<div class="container">
+
+  <% Place.all.each do |p| %>
+  <div class="row">
+    <div class="col-md-4">
+      <a href="/places/1">
+        <img class="img-responsive" src=<%= p.photo %>>
+      </a>
+    </div>
+    <div class="col-md-8">
+      <h3><%= link_to p.title, "/places/#{p.id}" %></h3>
+      <br>
+      <br>
+
+
+      <h3><%= link_to "delete", "/places/#{p.id}", :method => :delete %> | <%= link_to "edit", "places/#{p.id}/edit" %></h3>      
+    </div>
+  </div>
+  <% end %>
