@@ -1,7 +1,7 @@
-* Web Developement - hw3
+### Web Developement - hw3
  Benyan Gong
  April 20 2017
- *
+###
 
 1. Both overview and detail pages have a edit button.
 
