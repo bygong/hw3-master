@@ -1,6 +1,7 @@
-# Web Developement - hw 2
-# Benyan Gong
-# April 12 2017
+* Web Developement - hw3
+ Benyan Gong
+ April 20 2017
+ *
 
 1. Both overview and detail pages have a edit button.
 
